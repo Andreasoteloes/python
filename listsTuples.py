@@ -7,7 +7,7 @@
 my_lista = ['Rojo', 'Azul', 'Amarillo', 'Naranja', 'Violeta', 'Verde']
 
 # La función input() pausa el programa esperando que el usuario escriba algo. 
-# La dejamos como comentario para que no detenga el código ahora mismo.
+
 # input()
 
 # Imprimimos la lista completa.
@@ -17,7 +17,7 @@ print(my_lista)
 print(type(my_lista))
 
 # Accedemos a un elemento específico usando su índice (posición).
-# OJO: En programación, siempre empezamos a contar desde el CERO. El índice [2] es 'Amarillo', no 'Azul'.
+# En programación, siempre empezamos a contar desde el CERO. El índice [2] es 'Amarillo', no 'Azul'.
 print(my_lista[2])
 
 # len() viene de "length" (longitud). Nos dice cuántos elementos totales hay en la lista.
@@ -27,7 +27,7 @@ print("my_lista size: ", len(my_lista))
 # my_lista[0:2] significa "trae desde la posición 0 hasta la 2, PERO sin incluir la 2". (Trae 0 y 1).
 print(my_lista[0:2])
 
-# Si omites el primer número, Python asume que empiezas desde el inicio (0). Hace lo mismo que la línea anterior.
+# Si omites el primer númerosi  Python asume que empiezas desde el inicio (0). Hace lo mismo que la línea anterior.
 print(my_lista[:2])
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ print("Sort:")
 print()
 
 # NOTA ACADÉMICA IMPORTANTE: El método .sort() ordena la lista directamente por dentro, pero NO devuelve nada (devuelve None).
-# Por eso, al imprimir 'my_listaSort', verás que dice 'None'. 
+# Por eso al imprimir 'my_listaSort' se verá que dice 'None'. 
 my_listaSort = my_lista.sort()
 print(my_listaSort)
 
