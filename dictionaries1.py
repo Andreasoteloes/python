@@ -1,7 +1,7 @@
 # --------------------------------------------------------------------------------------------------------------------------------------
 # 1. CREACIÓN BÁSICA DE DICCIONARIOS
 # --------------------------------------------------------------------------------------------------------------------------------------
-# Creamos un diccionario relacionando los cuartos de la casa (texto) con su número de sensor (número).
+# Creamos un diccionario relacionando los cuartos de la casa (texto) con su temperatura (número).
 sensors = {"living room": 21, "kitchen": 23, "bedroom": 20, "pantry": 22}
 
 # Creamos otro diccionario relacionando áreas externas con su número de cámaras.
@@ -20,16 +20,16 @@ print(translations)
 # -------------------------------------------------------------------------------------------------------------------------------------
 
 # Verificando un error:
-# Las listas (los números entre corchetes []) no pueden ser las "llaves" del diccionario porque se pueden modificar. 
+# Las listas (los números entre corchetes []) no pueden ser las "claves" del diccionario porque se pueden modificar. 
 # Si le quito el numeral a la línea de abajo el programa marcará un error.
 # powers = {[1, 2, 4, 8, 16]: 2, [1, 3, 9, 27, 81]: 3}
 
-# Sin embargo, las listas si pueden ser los "valores" que se guardan adentro.
-# Aquí relacionamos un apellido (llave) con una lista de nombres (valor).
+# Sin embargo las listas si pueden ser los "valores" que se guardan adentro.
+# Relacionamos un apellido (clave) con una lista de nombres (valor).
 children = {"von Trapp": ["Johannes", "Rosmarie", "Eleonore"] , "Corleone": ["Sonny", "Fredo", "Michael"]}
 print(children)
 
-# Creamos un diccionario totalmente vacío. Es útil para prepararlo y llenarlo más adelante.
+# Creamos un diccionario totalmente vacío, para prepararlo y llenarlo más adelante.
 my_empty_dictionary = {}
 print(my_empty_dictionary)
 
@@ -41,18 +41,18 @@ print(my_empty_dictionary)
 menu = {"oatmeal": 3, "avocado toast": 6, "carrot juice": 5, "blueberry muffin": 2}
 print("Before: ", menu)
 
-# Para AGREGAR un dato nuevo: nombramos el diccionario, creamos la llave en corchetes y le asignamos un valor.
+# Para AGREGAR un dato nuevo: nombramos el diccionario creamos la clave en corchetes y le asignamos un valor.
 menu["cheesecake"] = 8
 print("After", menu)
 
-# ERROR LÓGICO COMÚN:
+# ERROR COMÚN:
 # Si uso el signo igual (=) con llaves {} repetidas veces, no se están agregando animales. 
 # Se está borrando el diccionario entero y creando uno nuevo cada vez. Al final solo quedan los caballos.
 animals_in_zoo = {"dinosaurs": 0}
 animals_in_zoo = {"horses": 2}
 print(animals_in_zoo)
 
-# Agregar múltiples llaves a la vez:
+# Agregar múltiples claves a la vez:
 sensors = {"living room": 21, "kitchen": 23, "bedroom": 20}
 print("Before", sensors)
 
@@ -67,7 +67,7 @@ user_ids.update({"theLooper": 138475, "stringQueen": 85739})
 print(user_ids)
 
 # SOBRESCRIBIR VALORES:
-# En un diccionario no se pueden repetir llaves. Si a una llave que ya existe le asignas un valor nuevo, el viejo se borra.
+# En un diccionario no se pueden repetir claves, si a una clave que ya existe le asigno un valor nuevo, el viejo se borra.
 menu = {"oatmeal": 3, "avocado toast": 6, "carrot juice": 5, "blueberry muffin": 2}
 print("Before: ", menu)
 
@@ -95,8 +95,8 @@ print("After 2", oscar_winners)
 names = ['Jenny', 'Alexus', 'Sam', 'Grace']
 heights = [61, 70, 67, 64]
 
-# zip() funciona como el cierre de una chamarra: junta el elemento 1 de la primera lista con el elemento 1 de la segunda.
-# La instrucción "for" recorre esos pares, nombrando al primero "key" (llave) y al segundo "value" (valor), guardándolos en "students".
+# zip() funciona como el cierre de una chaqueta: junta el elemento 1 de la primera lista con el elemento 1 de la segunda.
+# La instrucción "for" recorre esos pares, nombrando al primero "key" (clave) y al segundo "value" (valor), guardándolos en "students".
 students = {key:value for key, value in zip(names, heights)}
 print(students)
 
