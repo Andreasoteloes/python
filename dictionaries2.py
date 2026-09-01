@@ -1,50 +1,50 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1. OBTENER EL VALOR DE UNA LLAVE (ACCESO DIRECTO)
+# 1. OBTENER EL VALOR DE UNA CLAVE (ACCESO DIRECTO)
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Creamos un diccionario con nombres de edificios (llave) y sus alturas en metros (valor).
+# Creamos un diccionario con nombres de edificios (clave) y sus alturas en metros (valor).
 building_heights = {"Burj Khalifa": 828, "Shanghai Tower": 632, "Abraj Al Bait": 601, "Ping An": 599, "Lotte World Tower": 554.5, "One World Trade": 541.3}
 
-# Para acceder al valor, escribimos el nombre del diccionario y ponemos la llave entre corchetes [].
+# Para acceder al valor escribimos el nombre del diccionario y ponemos la clave entre corchetes [].
 print(building_heights["Burj Khalifa"]) # Imprime 828
 print(building_heights["Ping An"])      # Imprime 599
 
 # También podemos guardar listas enteras como valores. 
 zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
 
-# Al pedir la llave "earth" (tierra), el diccionario nos devuelve la lista completa de esos signos.
+# Al pedir la clave "earth" (tierra) el diccionario nos devuelve la lista completa de esos signos.
 print(zodiac_elements["earth"])
 print(zodiac_elements["fire"])
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 2. EL PROBLEMA DE LAS LLAVES INEXISTENTES Y CÓMO EVITARLO
+# 2. EL PROBLEMA DE LAS CLAVES INEXISTENTES Y CÓMO EVITARLO
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Si intentamos buscar una llave que NO existe usando corchetes (como "Landmark 81"),
+# Si intentamos buscar una clave que NO existe usando corchetes (como "Landmark 81"),
 # el programa generará un ERROR y detendrá su ejecución por completo. 
-# print(building_heights["Landmark 81"]) # (Mantenemos esta línea con numeral para que no arruine tu programa)
+# print(building_heights["Landmark 81"]) 
 
 # Una forma lógica de evitar el error es PREGUNTAR primero si la llave existe en el diccionario.
 key_to_check = "Landmark 81"
 
 # La palabra clave 'in' (en) verifica la existencia. 
-# Si es verdad (True), entra e imprime; si es falso (False), simplemente lo ignora y evita el error.
+# Si es verdad (True), entra e imprime; si es falso (False) simplemente lo ignora y evita el error.
 if key_to_check in building_heights:
   print(building_heights["Landmark 81"])
 
-# Para probar que sí funciona, agregamos una llave nueva ("energy") al diccionario del zodiaco.
+# Para probar que sí funciona, agregamos una clave nueva ("energy") al diccionario del zodiaco.
 zodiac_elements["energy"] = "Not a Zodiac element"
 
-# Como ahora sí existe, la condición se cumple y nos imprime su valor.
+# Como ahora sí existe la condición se cumple y nos imprime su valor.
 if "energy" in zodiac_elements:
   print(zodiac_elements["energy"])
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 3. OBTENER UNA LLAVE DE FORMA SEGURA: El método .get()
+# 3. OBTENER UNA CLAVE DE FORMA SEGURA: El método .get()
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Existe una herramienta más profesional que los corchetes: el método .get() (obtener).
-# Si la llave existe, te da el valor. Si NO existe, no genera error, sino que te devuelve 'None' (Nada/Nulo).
+# el método .get() (obtener).
+# Si la clave existe, te da el valor. Si NO existe, no genera error, sino que te devuelve 'None' (Nada/Nulo).
 
 building_heights.get("Shanghai Tower") # Esta línea internamente devuelve 632.
 building_heights.get("My House")       # Esta línea internamente devuelve 'None', manteniendo el programa a salvo.
@@ -73,7 +73,7 @@ print(stack_id)
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # El método .pop() extrae un elemento: te entrega su valor para que lo uses, pero lo BORRA del diccionario.
-# Si le pasas un segundo dato después de la coma, ese será su "salvavidas" (valor por defecto) por si no encuentra la llave.
+# Si le paso un segundo dato después de la coma, ese será su "salvavidas" (valor por defecto) por si no encuentra la llave.
 raffle = {223842: "Teddy Bear", 872921: "Concert Tickets", 320291: "Gift Basket", 412123: "Necklace", 298787: "Pasta Maker"}
 
 # Saca el boleto 320291 y nos entrega "Gift Basket". Al mismo tiempo, lo elimina de la rifa.
@@ -103,7 +103,7 @@ print(available_items) # Los ítems consumidos ya no están.
 print(health_points)   # La vida subió a 65.
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 5. OBTENER TODAS LAS LLAVES: El método .keys()
+# 5. OBTENER TODAS LAS CLAVES: El método .keys()
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 test_scores = {"Grace":[80, 72, 90], "Jeffrey":[88, 68, 81], "Sylvia":[80, 82, 84], "Pedro":[98, 96, 95], "Martin":[78, 80, 78], "Dina":[64, 60, 75]}
@@ -118,7 +118,7 @@ for student in test_scores.keys():
 
 num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
 
-# Podemos guardar todas las llaves extraídas en variables nuevas para usarlas después.
+# Podemos guardar todas las claves extraídas en variables nuevas para usarlas después.
 users = user_ids.keys()
 lessons = num_exercises.keys()
 
@@ -129,7 +129,7 @@ print(lessons)
 # 6. OBTENER TODOS LOS VALORES: El método .values()
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# A la inversa, .values() ignora las llaves y nos entrega únicamente los datos almacenados.
+# A la inversa, .values() ignora las claves y nos entrega únicamente los datos almacenados.
 for score_list in test_scores.values():
  print(score_list) # Imprime las calificaciones puras, sin los nombres de los alumnos.
 
@@ -143,7 +143,7 @@ for exercises in num_exercises.values():
 print(total_exercises)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 7. OBTENER TODO JUNTO (LLAVE Y VALOR): El método .items()
+# 7. OBTENER TODO JUNTO (CLAVE Y VALOR): El método .items()
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 biggest_brands = {"Apple": 184, "Google": 141.7, "Microsoft": 80, "Coca-Cola": 69.7, "Amazon": 64.8}
 
