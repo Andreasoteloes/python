@@ -16,12 +16,12 @@ translations = {"mountain": "orod", "bread": "bass", "friend": "mellon", "horse"
 print(translations)
 
 # -------------------------------------------------------------------------------------------------------------------------------------
-# 2. EL ERROR DE USAR LISTAS COMO LLAVES
+# 2. EL ERROR DE USAR LISTAS COMO CLAVES
 # -------------------------------------------------------------------------------------------------------------------------------------
 
 # Verificando un error:
 # Las listas (los números entre corchetes []) no pueden ser las "claves" del diccionario porque se pueden modificar. 
-# Si le quito el numeral a la línea de abajo el programa marcará un error.
+# Al quitar el numeral a la línea de abajo el programa marcará un error.
 # powers = {[1, 2, 4, 8, 16]: 2, [1, 3, 9, 27, 81]: 3}
 
 # Sin embargo las listas si pueden ser los "valores" que se guardan adentro.
